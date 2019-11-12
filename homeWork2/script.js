@@ -22,7 +22,8 @@ for ( let i = 0; i < 2; i++){
         console.log("done");
         appData.expenses[a] = b;
     } else{
-        continue;
+        console.log ("bad result");
+        i--;
     }
 }
 
@@ -33,15 +34,16 @@ var j = 0;
 while ( j < 2 ){
     let a = prompt("Введите обязательную статью расходов в этом месяце", ''),
     b = prompt("Во сколько обойдется?", '');
-    j++;
-
+    
     if ( (typeof(a))=== 'string' && (typeof(a)) != null && (typeof(b)) != null
     && a != '' && b != '' && a.length < 50 ) {
         console.log("done");
         appData.expenses[a] = b;
     } else{
-        continue;
+        console.log ("bad result");
+        j--;
     }
+    j++;
 }
 */
 
@@ -58,8 +60,10 @@ do{
         console.log("done");
         appData.expenses[a] = b;
     } else{
-        continue;
+        console.log ("bad result");
+        k--;
     }
+    k++;
 } while(k < 2);
 */
 
